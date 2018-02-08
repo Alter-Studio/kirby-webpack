@@ -55,6 +55,15 @@ Kirby-webpack wraps PHP and [Kirby CMS](http://getkirby.com) inside a full pre-c
 - Generate a `stats.json` file from your bundled js to optimize your dependency tree
 - **Multiple config files** to make your own workflow from the starterkit
 
+## Alter Features
+
+- Laravel Blade templates
+- Barba.js
+- SASS
+- Bourbon Neat
+- BEM mixins
+
+
 <br><br>
 
 ## Requirements
