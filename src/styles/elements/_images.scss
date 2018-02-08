@@ -1,0 +1,27 @@
+// For lazy sizes
+
+/* fade image in after load */
+.lazyload,
+.lazyloading {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.blur-up {
+    -webkit-filter: blur(20px);
+    filter: blur(20px);
+    transition: filter 1s, -webkit-filter 1s;
+}
+
+.blur-up.lazyloaded {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+}
+
+img {
+    width: 100%;
+}

@@ -1,0 +1,38 @@
+/**
+ *  Styles
+ */
+
+// Do not declare anything before the metadata block; this first section is solely for variable, function, and mixin definitions
+// Note: `bower_components` is already in Sass"s path
+
+// Configuration variables and settings
+@import "helpers/config";
+
+//Library: mixins, functions, etc. specific to this theme
+@import "helpers/library";
+@import "helpers/bem";
+@import "helpers/clearfix";
+@import "helpers/reset";
+
+// Bourbon & Neat
+//@import "plugins/bourbon/bourbon.scss";
+@import "plugins/neat/neat.scss";
+
+// Elements
+@import "elements/colours";
+@import "elements/type";
+@import "elements/grid";
+@import "elements/spacing";
+@import "elements/buttons";
+@import "elements/images";
+
+// Views
+@import "views/snippets/header";
+@import "views/snippets/footer";
+@import "views/snippets/header-desktop";
+@import "views/snippets/header-mobile";
+@import "views/home";
+@import "views/default";
+
+// Plugins
+//@import "plugins/sprite";

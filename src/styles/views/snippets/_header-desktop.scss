@@ -1,0 +1,23 @@
+@include b("header-desktop") {
+    max-width: $site-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    @include grid-container();
+    @include grid-media($smdesktop) {
+        display: block;
+    }
+}
+@include b("menu-desktop") {
+    display: flex;
+    align-items: center;
+    height: 3em;
+    @include grid-column(12);
+    @include e("item") {
+        list-style-type: none;
+        margin-right: 2em;
+        &:last-of-type {
+            margin-right: 0px;
+        }
+    }
+}

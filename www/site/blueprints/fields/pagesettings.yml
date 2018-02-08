@@ -1,0 +1,20 @@
+# /site/blueprints/fields/pagesettings.yml
+type: group
+fields:
+  pageSettings:
+    label: Page Settings & SEO
+    type: headline
+    numbered: false
+  title:
+    label: Title
+    type:  text
+  metadescription:
+    label: Meta Description
+    type:  textarea
+    buttons: false
+    validate:
+      maxLength: 320
+  twittercard:
+    label: Social Image
+    help: Will appear when the page is linked/posted on Twitter, Facebook and in iMessages.
+    type: image

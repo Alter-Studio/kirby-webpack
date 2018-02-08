@@ -1,0 +1,20 @@
+title: Page
+pages: true
+files: true
+  fields:
+    title:
+      label: Title
+      type: text
+fields:
+  pageSettings:
+    extends: pagesettings
+  pageContent:
+    label: Page Content
+    type: headline
+    numbered: false
+  text:
+    label: Text
+    type:  textarea
+  image:
+    label: Image
+    type:  image

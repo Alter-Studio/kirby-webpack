@@ -1,7 +1,13 @@
 title: Page
 pages: true
 files: true
+  fields:
+    caption:
+      label: Title
+      type: text
 fields:
+  pageSettings:
+    extends: pagesettings
   title:
     label: Title
     type:  text

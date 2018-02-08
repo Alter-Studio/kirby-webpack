@@ -1,7 +1,7 @@
 {
   "name": "kirby-webpack",
-  "version": "0.7.3",
-  "description": "A kirby starter-kit with modern frontend tools",
+  "version": "0.0.1",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "stats": "node scripts/check-preprocessor.js && cross-env NODE_ENV=production webpack -p --config webpack.config.prod.js --profile --json > stats.json && echo \"→ Stats.json created\" && echo \"→ Drop your file to https://chrisbateman.github.io/webpack-visualizer/\"",
@@ -19,15 +19,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brocessing/kirby-webpack.git"
+    "url": "git+git@github.com:Alter-Studio/kirby-webpack.git"
   },
   "keywords": [],
-  "author": "Brocessing (http://github.com/brocessing)",
+  "author": "Oliver Belmont",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/brocessing/kirby-webpack/issues"
+    "url": "https://github.com/Alter-Studio/kirby-webpack/issues"
   },
-  "homepage": "https://github.com/brocessing/kirby-webpack#readme",
+  "homepage": "https://github.com/Alter-Studio/kirby-webpack#readme",
   "devDependencies": {
     "@pqml/node-php-server": "^0.3.1",
     "autoprefixer": "^7.2.5",
@@ -49,11 +49,11 @@
     "fs-extra": "^5.0.0",
     "github-download": "^0.5.0",
     "kool-shell": "^1.5.0",
-    "less": "^3.0.0-alpha.3",
-    "less-loader": "^4.0.5",
+    "node-sass": "^4.7.2",
     "postcss-loader": "^2.0.10",
     "progress-bar-webpack-plugin": "^1.10.0",
     "resolve-url-loader": "^2.2.1",
+    "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
     "tail": "^1.2.3",
     "webpack": "^3.10.0",
@@ -61,5 +61,10 @@
     "webpack-hot-middleware": "^2.21.0",
     "webpack-merge": "^4.1.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "barba.js": "^1.0.0",
+    "jquery": "^3.3.1",
+    "lazysizes": "^4.0.1"
+  },
+  "private": false
 }

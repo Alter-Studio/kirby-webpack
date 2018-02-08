@@ -1,0 +1,34 @@
+// Spacing
+
+/**
+ *  Spacing Map
+ *  Example usage:
+ *
+ *  $purple-spacing: (
+ *    null  : (20px),
+ *    small : 20px,
+ *    medium: 40px
+ *  );
+ *
+ *  .test{
+ *    @include spacing(padding-bottom, $purple-spacing);
+ *  }
+ */
+
+$yellow-spacing: (
+    null : (100px),
+    small : 100px,
+    medium: 100px
+);
+
+$blue-spacing: (
+    null : (50px),
+    small : 50px,
+    medium: 50px
+);
+
+$pink-spacing: (
+    null : (25px),
+    small : 25px,
+    medium: 25px
+);

@@ -1,0 +1,120 @@
+$neat-grid: (
+    columns: 12,
+    gutter: 10px,
+    direction: ltr
+);
+
+$tablet: (
+    columns: 12,
+    gutter: 10px,
+    media: $screen-xs,
+    direction: ltr
+);
+
+$smdesktop: (
+    columns: 12,
+    gutter: 10px,
+    media: $screen-sm,
+    direction: ltr
+);
+
+$mddesktop: (
+    columns: 12,
+    gutter: 10px,
+    media: $screen-md,
+    direction: ltr
+);
+
+$lgdesktop: (
+    columns: 12,
+    gutter: 10px,
+    media: $screen-lg,
+    direction: ltr
+);
+
+$xldesktop: (
+    columns: 12,
+    gutter: 10px,
+    media: $screen-xlg,
+    direction: ltr
+);
+
+//Here for reference
+
+// $screen-xs:                  480px !default;
+
+// // Small screen / tablet
+// $screen-sm:                  768px !default;
+
+// // Medium screen / desktop
+// $screen-md:                  992px !default;
+
+// // Large screen / wide desktop
+// $screen-lg:                  1230px !default;
+
+// // Extra Large screen / wide desktop
+// $screen-xlg:                  1700px !default;
+
+$site-max-width: 1600px;
+
+.container {
+    @include grid-container;
+    position: relative;
+    max-width: $site-max-width;
+    margin: 0 auto;
+}
+
+.grid-collapse {
+    @include grid-collapse();
+}
+
+//Row
+.row {
+    @include clearfix;
+}
+
+//Columns
+@for $i from 1 through 12 {
+    .column-#{$i} {
+        @include grid-column(12);
+        @include grid-media($smdesktop) {
+            @include grid-column($i);
+        }
+    }
+}
+
+//Push Columns Left
+@for $i from 1 through 12 {
+    .left-#{$i} {
+        @include grid-media($smdesktop) {
+            @include grid-push(-$i);
+        }
+    }
+}
+
+//Push Columns Right
+@for $i from 1 through 12 {
+    .right-#{$i} {
+        @include grid-media($smdesktop) {
+            @include grid-push($i);
+        }
+    }
+}
+
+//Shift Columns Right
+@for $i from 1 through 12 {
+    .shift-right-#{$i} {
+        @include grid-media($smdesktop) {
+            @include grid-shift($i);
+        }
+    }
+}
+
+//Shift Columns Left
+@for $i from 1 through 12 {
+    .shift-left-#{$i} {
+        @include grid-media($smdesktop) {
+            @include grid-shift(-$i);
+        }
+    }
+}
