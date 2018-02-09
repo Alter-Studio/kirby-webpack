@@ -4,7 +4,7 @@
     "panel": "https://github.com/getkirby/panel.git",
     "fields": {},
     "plugins": {
-      "meta-tags": "https://github.com/pedroborges/meta-tags.git",
+      "kirby-meta-tags": "https://github.com/pedroborges/kirby-meta-tags.git",
       "blade": "https://github.com/pedroborges/kirby-blade-template.git"
     },
     "tags": {},

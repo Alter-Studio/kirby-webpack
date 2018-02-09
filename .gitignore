@@ -70,6 +70,6 @@ Temporary Items
 # <KirbyWebpack>
 www/kirby
 www/panel
-www/site/plugins/meta-tags
+www/site/plugins/kirby-meta-tags
 www/site/plugins/blade
 # </KirbyWebpack>

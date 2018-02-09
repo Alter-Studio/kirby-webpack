@@ -13,3 +13,8 @@ make Kirby work. For more fine-grained configuration
 of the system, please check out http://getkirby.com/docs/advanced/options
 
 */
+
+c::set('blade.directives', [
+	'customhtml' => function($value){return "<p>Some custom HTML</p>";},
+	'testdir' => function($value){ return '<p>TEST DIRECTIVE</p>';}
+]);
