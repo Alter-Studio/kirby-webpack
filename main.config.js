@@ -1,4 +1,7 @@
 const path = require('path')
+const glob = require('glob').sync
+const merge = require('webpack-merge')
+
 
 /**
  * BUNDLE ENTRY FILES
@@ -6,10 +9,25 @@ const path = require('path')
  * Formatted as { input: output }
  * paths are relative to your project root (__dirname)
  */
-const entries = {
+
+ //Sprite Entries
+const sprites = glob('src/icons/**/*.svg');
+
+let spriteEntry = {}
+
+for (var i = sprites.length - 1; i >= 0; i--) {
+  spriteEntry[sprites[i]] = sprites[i].replace('src/icons/', 'www/assets/');
+
+}
+
+//Non dynamic entries
+const basicEntries = {
   'src/scripts/application.js': 'www/assets/bundle.js',
   'src/styles/main.scss': 'www/assets/bundle.css',
 }
+
+//Merge
+const entries = merge(basicEntries, spriteEntry)
 
 /**
  * CSS CONFIGURATION

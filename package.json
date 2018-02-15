@@ -64,10 +64,12 @@
   "dependencies": {
     "barba.js": "^1.0.0",
     "copy-webpack-plugin": "^4.4.1",
+    "glob": "^7.1.2",
     "imagemin-mozjpeg": "^7.0.0",
     "imagemin-webpack-plugin": "^2.0.0",
     "jquery": "^3.3.1",
     "lazysizes": "^4.0.1",
+    "svg-sprite-loader": "^3.6.2",
     "write-file-webpack-plugin": "^4.2.0"
   },
   "private": false

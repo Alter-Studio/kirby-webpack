@@ -130,7 +130,11 @@ Blade Directives
 */
 
 c::set('blade.directives', [
-	'customhtml' => function($value){return "<p>Some custom HTML</p>";},
-	'testdir' => function($value){ return '<p>TEST DIRECTIVE</p>';}
+	'icon' => function($value){
+        $value = preg_replace('/(\'|&#0*39;)/', '', $value);
+        $output = '<svg viewBox="0 0 100 100" class="icon icon--' . $value . '">';
+        $output .= '<use xlink:href="#'.$value.'"></use>';
+        $output .= '</svg>';
+        return $output;
+    }
 ]);
-

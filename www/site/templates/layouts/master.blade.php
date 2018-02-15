@@ -12,10 +12,17 @@
 </head>
 
 <body>
+    <div class="sprites">
+        @php
+        $svg_file = file_get_contents('./assets/icons/sprites.svg');
+        echo $svg_file;
+        @endphp
+    </div>
     <header>
         @include('snippets.header-desktop')
         @include('snippets.header-mobile')
     </header>
+    @icon('twitter')
     <div id="main">
         <div class="wrapper js-current" data-namespace="{{ $page->intendedTemplate() }}">
             @yield('content')
