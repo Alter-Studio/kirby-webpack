@@ -5,7 +5,7 @@
     "fields": {},
     "plugins": {
       "kirby-meta-tags": "https://github.com/pedroborges/kirby-meta-tags.git",
-      "blade": "https://github.com/obelmont/kirby-blade-template.git"
+      "blade": "https://github.com/pedroborges/kirby-blade-template.git"
     },
     "tags": {},
     "widgets": {}
