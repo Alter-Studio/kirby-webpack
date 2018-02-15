@@ -4,6 +4,9 @@ const merge = require('webpack-merge')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const common = require('./webpack.config.common')
 const user = require('./scripts/utils/format-config')(require('./main.config.js'))
+const ImageminPlugin = require('imagemin-webpack-plugin').default
+const imageminMozjpeg = require('imagemin-mozjpeg')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const prodConfig = {
   entry: user.entries,
@@ -41,7 +44,24 @@ const prodConfig = {
       mangle: { screw_ie8: true },
       sourceMap: true
     }),
-    new webpack.optimize.OccurrenceOrderPlugin()
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new CopyWebpackPlugin([{
+        from:'src/images',
+        to:'assets/images'
+    }]),
+    new ImageminPlugin({
+      // externalImages: {
+      //   context: 'src', // Important! This tells the plugin where to "base" the paths at
+      //   //sources: 'src/images/**/*',
+      //   sources: glob.sync('src/images/**/*'),
+      //   destination: 'www/assets'
+      // },
+      optipng: { optimizationLevel: 7 },
+      gifsicle: { optimizationLevel: 3 },
+      pngquant: { quality: '65-90', speed: 4 },
+      svgo: { removeUnknownsAndDefaults: false, cleanupIDs: false },
+      plugins: [imageminMozjpeg({ quality: 75 })]
+    })    
   ],
   devtool: '#source-map',
   bail: true

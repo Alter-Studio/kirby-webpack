@@ -2,6 +2,10 @@ const merge = require('webpack-merge')
 const webpack = require('webpack')
 const common = require('./webpack.config.common')
 const user = require('./scripts/utils/format-config')(require('./main.config.js'))
+const ImageminPlugin = require('imagemin-webpack-plugin').default
+const imageminMozjpeg = require('imagemin-mozjpeg')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const WriteFilePlugin = require('write-file-webpack-plugin');
 
 const cssLoaders = (
   [
@@ -51,7 +55,25 @@ const devConfig = {
   },
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new WriteFilePlugin(),
+    new CopyWebpackPlugin([{
+        from:'src/images',
+        to:'assets/images'
+    }]),
+    new ImageminPlugin({
+      // externalImages: {
+      //   context: 'src', // Important! This tells the plugin where to "base" the paths at
+      //   //sources: 'src/images/**/*',
+      //   sources: glob.sync('src/images/**/*'),
+      //   destination: 'www/assets'
+      // },
+      optipng: { optimizationLevel: 7 },
+      gifsicle: { optimizationLevel: 3 },
+      pngquant: { quality: '65-90', speed: 4 },
+      svgo: { removeUnknownsAndDefaults: false, cleanupIDs: false },
+      plugins: [imageminMozjpeg({ quality: 75 })]
+    })
   ],
   devtool: '#eval-source-map'
 }

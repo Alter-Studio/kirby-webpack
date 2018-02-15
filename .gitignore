@@ -12,6 +12,10 @@ www/assets/avatars/*
 !www/assets/avatars/index.html
 www/site/config/license.php
 
+### Image Assets ###
+# Built via webpack so not nessisary to store two copies
+www/assets/images/**/*
+
 ### PHP ###
 php-error.log*
 

@@ -8,7 +8,7 @@ const path = require('path')
  */
 const entries = {
   'src/scripts/application.js': 'www/assets/bundle.js',
-  'src/styles/main.scss': 'www/assets/bundle.css'
+  'src/styles/main.scss': 'www/assets/bundle.css',
 }
 
 /**
