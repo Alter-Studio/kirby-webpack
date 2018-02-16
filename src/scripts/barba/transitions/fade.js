@@ -1,6 +1,6 @@
 import $ from "jquery";
 import Barba from "barba.js";
-import setNav from ".././setnav.js";
+import setNav from "../../functions/setnav.js";
 
 const loaderElement = document.querySelector(".o-loading");
 

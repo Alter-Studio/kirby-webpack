@@ -1,2 +1,2 @@
-import "./scripts/barba";
-import "./scripts/init";
+import "./barba/barba.js";
+import "./functions/init.js";

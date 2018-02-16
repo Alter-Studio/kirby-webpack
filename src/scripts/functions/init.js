@@ -1,6 +1,6 @@
 import $ from "jquery";
-import setNav from "../modules/setnav";
-import mobileMenu from "../modules/mobilemenu";
+import setNav from "./setnav";
+import mobileMenu from "./mobilemenu";
 import lazysizes from "lazysizes";
 
 /***** Get it goin' *****/
@@ -9,7 +9,6 @@ document.addEventListener(
   () => {
     setNav();
     mobileMenu();
-    console.log('working');
   },
   false
 );

@@ -2,11 +2,11 @@ import $ from "jquery";
 import Barba from "barba.js";
 
 //Transitions
-import FadeTransition from "../modules/barbatransitions/fade";
+import FadeTransition from "./transitions/fade.js";
 
 //Views
-import Default from "../modules/barbaviews/default";
-import Home from "../modules/barbaviews/home";
+import Default from "./views/default.js";
+import Home from "./views/home.js";
 
 //Init Views
 Default.init();
@@ -55,10 +55,10 @@ Barba.Dispatcher.on("linkClicked", el => {
 //   ga('send', 'pageview', window.location.pathname);
 // });
 
-document.addEventListener("DOMContentLoaded", () => {
+//document.addEventListener("DOMContentLoaded", () => {
   Barba.Pjax.init();
   Barba.Prefetch.init();
-});
+//});
 
 /**
  * Next step, you have to tell Barba to use the new Transition
