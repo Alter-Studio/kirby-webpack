@@ -23,11 +23,12 @@ Barba.Pjax.Dom.containerClass = "wrapper";
 
 Barba.scrollTop = function(scrollDuration) {
   const scrollHeight = window.scrollY,
-    scrollStep = Math.PI / (scrollDuration / 15),
-    cosParameter = scrollHeight / 2;
+        scrollStep = Math.PI / (scrollDuration / 15),
+        cosParameter = scrollHeight / 2;
+
   var scrollCount = 0,
-    scrollMargin,
-    scrollInterval = setInterval(function() {
+      scrollMargin,
+      scrollInterval = setInterval(function() {
       if (window.scrollY != 0) {
         scrollCount = scrollCount + 1;
         scrollMargin =
@@ -55,10 +56,8 @@ Barba.Dispatcher.on("linkClicked", el => {
 //   ga('send', 'pageview', window.location.pathname);
 // });
 
-//document.addEventListener("DOMContentLoaded", () => {
-  Barba.Pjax.init();
-  Barba.Prefetch.init();
-//});
+Barba.Pjax.init();
+Barba.Prefetch.init();
 
 /**
  * Next step, you have to tell Barba to use the new Transition
