@@ -11,6 +11,15 @@ www/site/accounts/*
 www/assets/avatars/*
 !www/assets/avatars/index.html
 www/site/config/license.php
+www/assets/images/*
+www/assets/*.js
+www/assets/*.css
+www/assets/*.map
+
+### Hotupdate ###
+
+www/*.js
+www/*.json
 
 ### Image Assets ###
 # Built via webpack so not nessisary to store two copies
