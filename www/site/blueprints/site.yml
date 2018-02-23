@@ -10,5 +10,5 @@ fields:
   trackingcode:
     label: Google Analytics Tracking Code
     help: Copy and paste from your google analytics dashboard.
-    type:  textarea
+    type:  text
     buttons: false

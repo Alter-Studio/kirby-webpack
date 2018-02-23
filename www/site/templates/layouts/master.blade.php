@@ -28,7 +28,18 @@
             @yield('content')
         </div>
     </div>
-    {{ $site->trackingcode()->html() }}
+    <script>
+        const trackingCode = '{{ $site->trackingcode()->html() }}';
+    </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106769220-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', trackingCode);
+    </script>    
     {{ js('assets/bundle.js') }}
     </body>
 </html>
