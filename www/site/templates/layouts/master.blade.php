@@ -32,7 +32,7 @@
         const trackingCode = '{{ $site->trackingcode()->html() }}';
     </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106769220-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ $site->trackingcode()->html() }}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
