@@ -31,7 +31,7 @@
     <script>
         const trackingCode = '{{ $site->trackingcode()->html() }}';
     </script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ $site->trackingcode()->html() }}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
