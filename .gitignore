@@ -29,6 +29,7 @@ www/assets/images/**/*
 php-error.log*
 
 ### Workflow & Editor ###
+.idea
 .vscode
 .eslintcache
 .stylelintcache

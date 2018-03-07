@@ -1,7 +1,7 @@
 {
   "name": "kirby-webpack",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.7.4",
+  "description": "A kirby starter-kit with modern frontend tools",
   "main": "index.js",
   "scripts": {
     "stats": "node scripts/check-preprocessor.js && cross-env NODE_ENV=production webpack -p --config webpack.config.prod.js --profile --json > stats.json && echo \"→ Stats.json created\" && echo \"→ Drop your file to https://chrisbateman.github.io/webpack-visualizer/\"",
