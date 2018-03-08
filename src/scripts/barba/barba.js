@@ -49,7 +49,7 @@ Barba.Dispatcher.on("linkClicked", el => {
 
 //Tag manager dispatcher
 // Barba.Dispatcher.on('initStateChange', function() {
-//   if (typeof ga !== 'function' || Barba.HistoryManager.history.length <= 1) {
+//   if (typeof gtag !== 'function' || Barba.HistoryManager.history.length <= 1) {
 //     return;
 //   }
 //   gtag('event', 'page_view', { 'send_to': trackingCode, 'page_path':  window.location.pathname });
