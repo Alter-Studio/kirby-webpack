@@ -29,5 +29,8 @@ $screen-xs-max: ($screen-sm - 1) !default;
 $screen-sm-max: ($screen-md - 1) !default;
 $screen-md-max: ($screen-lg - 1) !default;
 
+//Site max width
+$site-max-width: 1600px;
+
 // Gutter margin
 $gutter-margin: 30px;
