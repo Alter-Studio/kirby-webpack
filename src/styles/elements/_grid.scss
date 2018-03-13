@@ -39,24 +39,6 @@ $xldesktop: (
     direction: ltr
 );
 
-//Here for reference
-
-// $screen-xs:                  480px !default;
-
-// // Small screen / tablet
-// $screen-sm:                  768px !default;
-
-// // Medium screen / desktop
-// $screen-md:                  992px !default;
-
-// // Large screen / wide desktop
-// $screen-lg:                  1230px !default;
-
-// // Extra Large screen / wide desktop
-// $screen-xlg:                  1700px !default;
-
-$site-max-width: 1600px;
-
 .container {
     @include grid-container;
     position: relative;
