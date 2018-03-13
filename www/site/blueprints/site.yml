@@ -8,7 +8,7 @@ fields:
     type:  textarea
     buttons: false
   trackingcode:
-    label: Google Analytics Tracking Code
+    label: Google Tags Tracking Code
     help: Copy and paste from your google analytics dashboard.
     type:  text
     buttons: false

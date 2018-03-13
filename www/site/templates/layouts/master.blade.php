@@ -22,23 +22,20 @@
         @include('snippets.header-desktop')
         @include('snippets.header-mobile')
     </header>
-    @icon('twitter')
-    <div id="main">
+    <div id="main" class="container">
         <div class="wrapper js-current" data-namespace="{{ $page->intendedTemplate() }}">
             @yield('content')
         </div>
     </div>
-    <script>
-        const trackingCode = '{{ $site->trackingcode()->html() }}';
-    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ $site->trackingcode()->html() }}"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    const trackingCode = '{{ $site->trackingcode()->html() }}';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-      gtag('config', trackingCode);
+    gtag('config', trackingCode);
     </script>    
     {{ js('assets/bundle.js') }}
     </body>
