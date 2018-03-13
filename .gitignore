@@ -13,7 +13,10 @@ www/assets/avatars/*
 www/site/config/license.php
 www/assets/images/*
 www/assets/*.js
+www/assets/*.js.map
+www/assets/*.json
 www/assets/*.css
+www/assets/*.css.map
 www/assets/*.map
 
 ### Hotupdate ###
