@@ -18,6 +18,7 @@ www/assets/*.json
 www/assets/*.css
 www/assets/*.css.map
 www/assets/*.map
+www/assets/*.svg
 
 ### Hotupdate ###
 
