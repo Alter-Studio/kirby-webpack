@@ -7,6 +7,7 @@ const user = require('./scripts/utils/format-config')(require('./main.config.js'
 const ImageminPlugin = require('imagemin-webpack-plugin').default
 const imageminMozjpeg = require('imagemin-mozjpeg')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 
 const prodConfig = {
   entry: user.entries,
@@ -18,7 +19,16 @@ const prodConfig = {
           fallback: 'style-loader',
           use: common.CSSLoaders
         })
-      }
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader',
+        //include: 'src/icons',
+        options: {
+          extract: true,
+          spriteFilename: 'assets/icons/sprites.svg',
+        },
+      },
     ]
   },
   plugins: [
@@ -35,7 +45,7 @@ const prodConfig = {
       },
       allChunks: true
     }),
-
+    new SpriteLoaderPlugin(),
     // Minification and size optimization
     new webpack.DefinePlugin({ 'process.env': { 'NODE_ENV': '"production"' } }),
     new webpack.optimize.UglifyJsPlugin({

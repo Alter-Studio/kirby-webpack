@@ -63,7 +63,7 @@ const devConfig = {
           extract: true,
           spriteFilename: 'assets/icons/sprites.svg',
         },
-      },      
+      },
     ]
   },
   plugins: [
