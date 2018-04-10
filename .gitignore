@@ -1,39 +1,35 @@
 ### Kirby ###
 # By default, git ignores all content from sub-pages folders
 # Comment the line below if you want git to handle all your content
-www/content/*/*/*
-www/thumbs/*
-!www/thumbs/index.html
+# www/content/*/*/*
+# www/thumbs/*
+# !www/thumbs/index.html
 www/site/cache/*
 !www/site/cache/index.html
 www/site/accounts/*
 !www/site/accounts/index.html
 www/assets/avatars/*
 !www/assets/avatars/index.html
-www/site/config/license.php
-www/assets/images/*
-www/assets/*.js
-www/assets/*.js.map
-www/assets/*.json
-www/assets/*.css
-www/assets/*.css.map
-www/assets/*.map
-www/assets/*.svg
+# www/site/config/license.php
 
 ### Hotupdate ###
 
 www/*.js
 www/*.json
 
-### Image Assets ###
+### Asset hiding ###
 # Built via webpack so not nessisary to store two copies
+www/assets/images/*
 www/assets/images/**/*
+www/assets/*.svg
+www/assets/*.js
+www/assets/*.css
+www/assets/*.map
 
 ### PHP ###
 php-error.log*
 
 ### Workflow & Editor ###
-.idea
 .vscode
 .eslintcache
 .stylelintcache
@@ -88,6 +84,9 @@ Temporary Items
 # <KirbyWebpack>
 www/kirby
 www/panel
-www/site/plugins/kirby-meta-tags
+www/site/fields/color
+www/site/plugins/meta-tags
 www/site/plugins/blade
 # </KirbyWebpack>
+
+www/assets/icons/sprites.svg
