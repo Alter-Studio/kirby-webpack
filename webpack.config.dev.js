@@ -69,7 +69,9 @@ const devConfig = {
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new WriteFilePlugin(),
+    new WriteFilePlugin({
+      test: /^(?!.*(hot)).*/,
+    }),
     new SpriteLoaderPlugin(),
     new CopyWebpackPlugin([{
         from:'src/images',
