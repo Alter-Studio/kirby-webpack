@@ -84,6 +84,9 @@ Temporary Items
 # <KirbyWebpack>
 www/kirby
 www/panel
+www/site/fields/previewfiles
+www/site/fields/builder
+www/site/fields/list
 www/site/plugins/kirby-meta-tags
 www/site/plugins/blade
 # </KirbyWebpack>

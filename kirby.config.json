@@ -4,7 +4,8 @@
     "panel": "https://github.com/getkirby/panel.git",
     "fields": {
       "previewfiles": "https://github.com/brocessing/kirby-previewfiles.git",
-      "builder": "https://github.com/TimOetting/kirby-builder.git"
+      "builder": "https://github.com/TimOetting/kirby-builder.git",
+      "list": "https://github.com/TimOetting/kirby-list-field.git"
     },
     "plugins": {
       "kirby-meta-tags": "https://github.com/pedroborges/kirby-meta-tags.git",
