@@ -2,12 +2,14 @@
 
 @section('content')
 			<h1>{{ $page->title()->html() }}</h1>
+			{{-- Responsive Image --}}
 			@if ($page->mainimage()->isNotEmpty())
 				@php
 					$img = $page->image($page->mainimage());
-					$dimensions = $img->dimensions();
+					$width = $img->dimensions()->width();
+					$height = $img->dimensions()->height();
 				@endphp
-				<div class="ratio-box" style="padding-bottom:calc({{$img->dimensions()->height()}} / {{$img->dimensions()->width()}} * 100%)">
+				<div class="ratio-box" style="padding-bottom:calc({{$height}} / {{$width}} * 100%)">
 			    <img
 			        data-sizes="auto"
 			        data-srcset="{{ $img->resize(175)->url() }} 175w,
@@ -18,5 +20,6 @@
 			        class="lazyload" />
 				</div>
 			@endif
+			{{--  / Responsive Image --}}
 			@icon('twitter')
 @endsection
