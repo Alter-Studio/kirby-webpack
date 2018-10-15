@@ -2,13 +2,8 @@ fields:
   title:
     label: Title
     type:  text
-  keywords:
-    label: Google Keywords
-    help: Separated by a comma.
-    type:  textarea
-    buttons: false
   trackingcode:
     label: Google Tags Tracking Code
     help: Copy and paste from your google analytics dashboard.
-    type:  text
+    type:  textarea
     buttons: false

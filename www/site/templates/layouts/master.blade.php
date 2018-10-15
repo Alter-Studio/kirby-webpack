@@ -3,12 +3,37 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    {{ $page->metaTags() }}
-    <meta name="keywords" content="{{ $site->keywords()->html() }}">
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    {{-- Twitter Meta --}}
+    <meta name="twitter:card" content="summary" />
+    {{-- Open Graph Meta --}}
+    <meta property="og:url" content="{{$page->url()}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{$page->title()}}" />
+    @if($page->metadescription()->isNotEmpty())
+      <meta property="og:description" content="{{$page->metadescription()}}" />
+    @else
+      <meta property="og:description" content="{{page('home')->metadescription()}}" />
+    @endif
+    @if($page->socialimage()->isNotEmpty())
+      <meta property="og:image" content="{{$page->image($page->socialimage())->resize(1200)->url()}}" />
+    @endif
+    {{-- Favicon | Generate here: https://realfavicongenerator.net/ --}}
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#ffffff">
+
     {{ liveCSS('assets/bundle.css') }}
-    <title>{{ $site->title()->html() }} | {{ $page->title()->html() }}</title>
+
+    {{-- Page Titles --}}
+    @if($page->isHomePage())
+      <title>{{ $site->title()->html() }}</title>
+    @else
+      <title>{{ $site->title()->html() }} | {{ $page->title()->html() }}</title>
+    @endif
 </head>
 
 <body>
@@ -27,16 +52,8 @@
             @yield('content')
         </div>
     </div>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ $site->trackingcode()->html() }}"></script>
-    <script>
-    const trackingCode = '{{ $site->trackingcode()->html() }}';
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', trackingCode);
-    </script>    
+    {{-- Google Analytics --}}
+    {{ $site->trackingcode()->html() }}
     {{ js('assets/bundle.js') }}
     </body>
 </html>

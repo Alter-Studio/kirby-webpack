@@ -6,8 +6,12 @@ Text:
 
 ----
 
-Metadescription: test
+Metadescription: 
 
 ----
 
 Twittercard: 
+
+----
+
+Socialimage: 

@@ -14,7 +14,7 @@ fields:
     buttons: false
     validate:
       maxLength: 320
-  twittercard:
+  socialimage:
     label: Social Image
-    help: Will appear when the page is linked/posted on Twitter, Facebook and in iMessages.
+    help: Preview image for Twitter, Facebook and in iMessages. Suggested size 1200 x 630.
     type: image
