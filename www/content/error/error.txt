@@ -2,4 +2,12 @@ Title: Error
 
 ----
 
-Text: Sorry the page you are looking for no longer exists.
+Text: Sorry, this page doesn't exist.
+
+----
+
+Metadescription: 
+
+----
+
+Socialimage: 

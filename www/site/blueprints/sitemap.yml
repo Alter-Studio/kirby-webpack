@@ -1,0 +1,14 @@
+title: Sitemap
+pages: false
+files: false
+options:
+  status: false
+  preview: true
+  url: false
+  delete: false
+  template: false
+fields:
+  message:
+    label: This page is automatically generated and sent to Google for SEO purposes.
+    type: text
+    readonly: true

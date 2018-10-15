@@ -1,0 +1,15 @@
+title: Error
+pages: false
+files: false
+options:
+  status: false
+  preview: true
+  url: false
+  delete: false
+  template: false
+fields:
+  text:
+    label: Text
+    type:  textarea
+    buttons:
+      - link
