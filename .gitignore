@@ -18,7 +18,7 @@ www/*.js
 www/*.json
 
 ### Asset hiding ###
-# Built via webpack so not nessisary to store two copies
+# Built via webpack so not neccessary to store two copies
 www/assets/images/*
 www/assets/images/**/*
 www/assets/*.svg

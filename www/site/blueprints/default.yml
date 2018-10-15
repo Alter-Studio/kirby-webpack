@@ -8,9 +8,12 @@ files: true
 fields:
   pageSettings:
     extends: pagesettings
+  previewfiles:
+    type: previewfiles
   title:
     label: Title
     type:  text
   text:
     label: Text
     type:  textarea
+  

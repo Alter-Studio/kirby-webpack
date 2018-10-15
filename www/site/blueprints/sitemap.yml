@@ -9,6 +9,7 @@ options:
   template: false
 fields:
   message:
-    label: This page is automatically generated and sent to Google for SEO purposes.
-    type: text
+    label: Read Only
+    type: line
+    help: This page is automatically generated and sent to Google for SEO purposes.
     readonly: true

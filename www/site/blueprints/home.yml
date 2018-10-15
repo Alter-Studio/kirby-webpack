@@ -8,6 +8,8 @@ files: true
 fields:
   pageSettings:
     extends: pagesettings
+  previewfiles:
+    type: previewfiles
   pageContent:
     label: Page Content
     type: headline

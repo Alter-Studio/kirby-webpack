@@ -2,7 +2,10 @@
   "modules": {
     "core": "https://github.com/getkirby/kirby.git",
     "panel": "https://github.com/getkirby/panel.git",
-    "fields": {},
+    "fields": {
+      "previewfiles": "https://github.com/brocessing/kirby-previewfiles.git",
+      "builder": "https://github.com/TimOetting/kirby-builder.git"
+    },
     "plugins": {
       "kirby-meta-tags": "https://github.com/pedroborges/kirby-meta-tags.git",
       "blade": "https://github.com/pedroborges/kirby-blade-template.git"
