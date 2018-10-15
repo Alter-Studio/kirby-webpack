@@ -4,8 +4,11 @@
 
 // @font-face {
 // 	font-family: 'FontName';
-// 	src: url('../fonts/fontname.woff') format('woff');
-// 	font-weight: normal;
+// 	src: url("/assets/fonts/fontname.eot");
+// 	src: url("/assets/fonts/fontname.eot?#iefix") format("embedded-opentype"),
+// 			 url("/assets/fonts/fontname.woff2") format("woff2"),
+// 			 url("/assets/fonts/fontname.woff") format("woff");
+// 	font-weight: 400;
 // 	font-style: normal;
 // }
 
@@ -29,12 +32,6 @@ $large-font-sizes: (
     medium: 20px
 );
 
-$xlarge-font-sizes: (
-    null : (18px, 1.4),
-    small : 17px,
-    medium: 20px
-);
-
 p,
 h1,
 h2,
@@ -44,26 +41,14 @@ h5 {
     // font-family: FontName;
 }
 
-p {
+.small {
     @include font-size($base-font-sizes);
 }
 
-h1 {
-    @include font-size($large-font-sizes);
-}
-
-h2 {
+.medium {
     @include font-size($medium-font-sizes);
 }
 
-h3 {
-    @include font-size($base-font-sizes);
-}
-
-h4 {
-    @include font-size($base-font-sizes);
-}
-
-h5 {
-    @include font-size($base-font-sizes);
+.large {
+    @include font-size($large-font-sizes);
 }
