@@ -17,6 +17,6 @@ fields:
   text:
     label: Text
     type:  textarea
-  image:
+  mainimage:
     label: Image
     type:  image

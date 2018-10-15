@@ -136,5 +136,5 @@ c::set('blade.directives', [
         $output .= '<use xlink:href="#'.$value.'"></use>';
         $output .= '</svg>';
         return $output;
-    }
+    },
 ]);

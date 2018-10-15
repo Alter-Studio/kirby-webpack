@@ -14,7 +14,7 @@ Text:
 
 ----
 
-Image: 
+Image: fillmurray.jpg
 
 ----
 
@@ -23,3 +23,7 @@ Socialcard: fillmurray.jpg
 ----
 
 Socialimage: fillmurray.jpg
+
+----
+
+Mainimage: fillmurray.jpg
