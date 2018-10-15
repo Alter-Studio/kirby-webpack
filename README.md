@@ -7,7 +7,7 @@
 
 <div align="center">
   <!-- Version -->
-  <a href="https://github.com/brocessing/kirby-webpack/releases"><img src="https://img.shields.io/badge/version-0.7.4-green.svg?style=flat-square" alt="Version"/></a>
+  <a href="https://github.com/brocessing/kirby-webpack/releases"><img src="https://img.shields.io/badge/version-0.10.0-green.svg?style=flat-square" alt="Version"/></a>
   <!-- License -->
   <a href="https://raw.githubusercontent.com/brocessing/kirby-webpack/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License" /></a>
 </div>
@@ -47,7 +47,7 @@ Kirby-webpack wraps PHP and [Kirby CMS](http://getkirby.com) inside a full pre-c
 - No more trouble with git submodules: introducing our own **Kirby Package Manager**
 - [Browsersync](https://browsersync.io/) dev server with **livereload** on all your website files
 - **Built-in PHP Server** wrapped in the dev server - we handle PHP for you
-- [Webpack 3](https://webpack.github.io/) with [HMR](https://webpack.github.io/docs/hot-module-replacement.html) 
+- [Webpack 4](https://webpack.github.io/) with [HMR](https://webpack.github.io/docs/hot-module-replacement.html) 
 - [LESS](http://lesscss.org/) + [PostCSS](http://postcss.org/)  + [Autoprefixer](https://github.com/postcss/autoprefixer) 
 - Option to **automatically switch from [LESS](http://lesscss.org/) to [SASS](http://sass-lang.com/) or [Stylus](http://stylus-lang.com/)**
 - **`ES6`** transpilation with [babel](https://babeljs.io/) + [babel-preset-env](https://github.com/babel/babel-preset-env)
@@ -67,8 +67,8 @@ Kirby-webpack wraps PHP and [Kirby CMS](http://getkirby.com) inside a full pre-c
 <br><br>
 
 ## Requirements
-- `node` >= 6
-- `npm` >= 3
+- `node` >= 8
+- `npm` >= 5
 - `php` >= 5.4
   - macOS → `php` command is native. you don't have to do anything!
   - windows → install it via the official PHP website: [http://windows.php.net/download/](http://windows.php.net/download/)

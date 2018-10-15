@@ -14,7 +14,8 @@ const cssLoaders = (
     {
       loader: 'style-loader',
       options: {
-        sourceMap: true
+        sourceMap: true,
+        singleton: true // avoid CSS Flashing
       }
     }
   ].concat(common.CSSLoaders)
@@ -38,7 +39,8 @@ if (user.css.preprocessorLoader) {
 
 
 const devConfig = {
-  entry: user.entries,
+  mode: 'development',
+  devtool: 'eval-source-map',
   module: {
     rules: [
       {
