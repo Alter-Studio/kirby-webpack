@@ -37,7 +37,7 @@
 </head>
 
 <body>
-    <div class="sprites">
+    <div class="sprites template-{{ $page->template() }}">
         @php
         $svg_file = file_get_contents('./assets/icons/sprites.svg');
         echo $svg_file;

@@ -64,6 +64,11 @@ var FadeTransition = Barba.BaseTransition.extend({
 
     $(this.oldContainer).hide();
 
+    const currentPage = Barba.HistoryManager.currentStatus();
+    const prevPage = Barba.HistoryManager.prevStatus();
+    $('body').removeClass(`template-${prevPage.namespace}`);
+    $('body').addClass(`template-${currentPage.namespace}`);
+
     $el.css({
       visibility: "visible",
       opacity: 0
