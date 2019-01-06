@@ -247,7 +247,7 @@ $breakpoints: (
 
 @mixin between($canvas-start, $canvas-end) {
     //Tablet Start
-    @if $canvas-start == tablet && $canvas-end == desktop {
+    @if $canvas-start == tablet and $canvas-end == desktop {
         @media (min-width: #{$screen-xs}) and (max-width: #{$screen-desktop - 1px}) {
             @content;
         }
