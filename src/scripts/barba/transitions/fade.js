@@ -38,6 +38,8 @@ var FadeTransition = Barba.BaseTransition.extend({
 
     const _this = this;
 
+    setNav();
+
     return new Promise(function(resolve, reject) {
       $(_this.oldContainer).animate({ opacity: 0 }, 400, () => {
         resolve();
@@ -76,7 +78,6 @@ var FadeTransition = Barba.BaseTransition.extend({
 
     $el.delay(400).animate({ opacity: 1 }, 400, () => {
       _this.done();
-      setNav();
     });
   }
 });
